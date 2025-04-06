@@ -40,6 +40,8 @@ public class SecurityConfig {
                     .requestMatchers(HttpMethod.PUT, "/productos/**").hasRole("ADMIN")
                     .requestMatchers(HttpMethod.DELETE, "/clientes/**").hasRole("ADMIN")
                     .requestMatchers(HttpMethod.DELETE, "/productos/**").hasRole("ADMIN")
+                    .requestMatchers(HttpMethod.GET, "/productos/**").hasAnyRole("ADMIN", "GUEST")
+                    .requestMatchers(HttpMethod.GET, "/clientes/**").hasAnyRole("ADMIN", "GUEST")
         );
 
         http.httpBasic(Customizer.withDefaults());

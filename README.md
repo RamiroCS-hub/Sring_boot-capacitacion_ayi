@@ -126,6 +126,7 @@ La implementación del Árbol Binario de Búsqueda fue desarrollada con las sigu
   - Recorrido recursivo: Más simple y elegante para entender
   - Recorrido iterativo: Más eficiente en términos de memoria para árboles grandes
 
+```mermaid
 graph TD
     A("actual (Nodo a eliminar con 2 hijos)");
     B("actual->izq");
@@ -164,7 +165,7 @@ graph TD
     linkStyle 2 stroke-width:2px,stroke:blue,color:blue;
     linkStyle 4 stroke-width:2px,stroke:blue,color:blue;
     linkStyle 6 stroke-width:2px,stroke:blue,color:blue;
-
+```
 ### Dificultades enfrentadas
 - Manejo de punteros en la eliminación de nodos, especialmente para el caso de nodos con dos hijos
 - Implementación de recorridos que puedan detenerse cuando la función de iteración devuelve false
